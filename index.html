@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+       *{
+        background-color: purple;
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
+      #msg{
+        color:white;
+        font-family:monospace;
+        font-size: 40px;
+        height: 100px;
+        font-weight:700;
+        margin-top: 10px;
+        text-align: center;
+        text-shadow: 7px 7px 10px black;
+        animation-name:bday;
+        animation-duration:1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+      }
+      @keyframes bday{
+         0%{
+          font-size: 50px;
+          letter-spacing: 2px;
+         }
+         100%{
+          font-size:60px;
+          letter-spacing: 4px;
+          text-shadow: 10px 10px 20px black;
+         }
+      }
+      #image{
+        display: flex;
+      }
+      #image1{
+        border-radius: 100px;
+        margin-left: 200px;
+        height: 150px;
+        width: 150px;
+        cursor: pointer;
+      }
+      #image1{
+             box-shadow: 0 5px 10px pink;
+      }
+      
+      #image2{
+             animation: bounce 1s cubic-bezier(.28,.84,.42,1) infinite;
+      }
+      @keyframes bounce{
+        0%{
+            transform: translateY(0);
+        }
+        20%{
+          transform: translateY(-25px);
+        }
+        40%{
+          transform: translateY(0);
+        }
+        55%{
+          transform: translateY(-15px) ;
+        }
+        70%{
+          transform: translateY(0) ;
+        }
+        85%{
+          transform: translateY(-8px);
+        }
+        100%{
+          transform: translateY(0);
+        }
+      }
+     #para{
+      margin-left: 140px;
+     }
+     .quotes{
+      background-color: aqua;
+      padding: 20px;
+      font-family: cursive;
+      border-radius: 40px;
+      text-transform: capitalize;
+      cursor: pointer;
+     }
+@media (max-width: 600px) {
+  #msg {
+    font-size: 25px;
+  }
+
+  #image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #image1 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  #para {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #msg {
+    font-size: 30px;
+  }
+
+  #image1{
+    margin-left: 80px;
+    margin-top: 40px;
+  }
+  #image{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #para {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+}
+
+@media (min-width: 1025px) {
+  #msg {
+    font-size: 40px;
+  }
+}
+    
+
+</style>
+<script>
+function showContent() {
+    document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+<body>
+   <div id="content">
+    <h1 id="msg">Welcome❤️</h1>
+    <div id="image">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.D8p2f1PzpzidvG9YDWUNiQHaHa?pid=Api&P=0&h=180" alt="" id="image1" onclick="showContent()">
+    <div id="para">
+      <p class="quotes"><b style="background-color: aqua; color: red;">birthday wishes💜</b><br>wish you many more happy returns of the day <b style="color: purple; background-color: aqua; font-weight: 900; font-family:monospace; font-size: 20px; color:red;">Raji</b><br><br>
+      ← click the image to get more suprises! and scroll down for birthday messages<br></p>  
+    </div>
+    </div>
+    <div id="surprise" style="display: none; text-align:center; margin-top:20px;">
+    
+    <img src="https://png.pngtree.com/png-vector/20240126/ourmid/pngtree-cute-rabbit-birthday-png-image_11558937.png"
+    style="height:200px; width:200px; border-radius:50px; cursor: pointer;" id="image2" >
+    <p style="color:white; font-size:15px;cursor: pointer; font-family: cursive;">
+      ✨ "Wishing you a day filled with happiness and a year filled with joy!"<br>
+      🌸 "May all your dreams come true and your smile never fade."<br>
+    </p>
+
+</div>
+</div>
+</body>
+</html>
